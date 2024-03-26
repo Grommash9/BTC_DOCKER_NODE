@@ -27,14 +27,6 @@ This command does the following:
 
 The container will start the Bitcoin node and begin syncing with the network. You can access the node's JSON-RPC interface using the exposed RPC port.
 
-## Configuration
-
-By default, the container runs the Bitcoin node on the mainnet. If you want to run it on the testnet, you can set the environment variable TESTNET to 1 when running the container:
-
-docker run -d -p 8333:8333 -p 8332:8332 --restart always -v bitcoin-data:/bitcoin -e TESTNET=1 --name bitcoin-node bitcoin-node
-
-The container uses a default configuration file located at /bitcoin/bitcoin.conf inside the container. You can modify this file by mounting a custom configuration file or by setting environment variables when running the container.
-
 ## Stopping the Container
 
 To stop the container, run:
@@ -54,5 +46,3 @@ Replace <command> with the desired bitcoin-cli command and arguments.
 For example, to get the current block count:
 
 docker exec -it bitcoin-node bitcoin-cli getblockcount
-
-That's it! You now have a README file for your Bitcoin Node Docker Container. Feel free to customize it further based on your specific requirements and any additional information you want to provide.
