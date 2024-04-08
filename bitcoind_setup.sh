@@ -25,7 +25,7 @@ echo "server=1" >> "/bitcoin/bitcoin.conf"
 echo "rpcuser=${RPC_USER}" >> "/bitcoin/bitcoin.conf"
 echo "rpcpassword=${RPC_PASSWORD}" >> "/bitcoin/bitcoin.conf"
 
-rpcallowip=0.0.0.0/0
+echo "rpcallowip=0.0.0.0/0" >> "/bitcoin/bitcoin.conf"
 
 [test]
-rpcbind=0.0.0.0
+echo "rpcbind=0.0.0.0" >> "/bitcoin/bitcoin.conf"
